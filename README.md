@@ -1,7 +1,10 @@
 
 Sure, here's a template for a README file for a hotel booking project on GitHub:
-
-Hotel Booking System
+  
+  
+  
+  
+  Hotel Booking System
 Table of Contents
 Introduction
 Features
@@ -13,6 +16,10 @@ License
 Contact
 Introduction
 The Hotel Booking System is a web application designed to facilitate online booking of hotel rooms. The system allows users to search for available rooms, make reservations, and manage their bookings. It also includes an admin interface for managing room availability, pricing, and customer reservations.
+
+
+
+
 
 Features
 User registration and authentication
@@ -42,6 +49,14 @@ MongoDB installed and running
 Stripe account for payment integration
 Steps
 Clone the repository:
+
+
+
+
+
+
+
+
 
 bash
 Copy code
