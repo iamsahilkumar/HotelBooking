@@ -1,43 +1,4 @@
-Create database Retail;
 
-Use retail;
-/*Importing features table*/
-
-Create table Features(store int, date text, temperature double, Fuel_price double, 
-Markdown1 double, Markdown2 double, Markdown3 double, Markdown4 double, Markdown5 double, CPI double,
-Unemployment double, isholiday text);
-
-select * from features;  
-
-
-/* changing the zeros in markdown columns to null value*/
-update features
-set markdown5= null
-where markdown5=0;
-
-Select markdown1, markdown2, markdown3, markdown4, markdown5
-from features;
-
-
-/* change date column*/
-Alter table  features
-add column NewDate date;
-
-select Str_to_date(Date,"%d/%c/%Y"), NewDate
-from features;
-
-SET SQL_SAFE_UPDATES = 0;
-
-update features
-set NewDate = Str_to_date(Date,"%d/%c/%Y");
-
-Alter table features
-drop Date;
-
-/* The average values of the independent factors in each year*/
-
-select year(newdate), round(avg(temperature), 2) as avgtemperature, round(avg(CPI),2) as avgcpi, round(avg(unemployment),2) as avgunemployment
-from features
 group by year(newdate);
 
 /* Importing other two tables*/
@@ -147,3 +108,4 @@ from C3 inner join stores as s using(store);
 Select round(avg(C3.avgsales),2), s.type
 from C3 inner join stores as s using(store)
 group by s.type;
+import numpy as numpy
